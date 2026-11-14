@@ -1,12 +1,10 @@
 # César Nsingi — Portfolio
 
-Personal portfolio of **César Nsingi**, fsoftware engineer.
-
 🌐 **Live site:** https://cesarnsingi.com
 
 ## About
 
-Full-stack developer specializing in the MERN stack, React.js, Node.js and modern web technologies. 
+software engineer specializing in the MERN stack, React.js, Node.js and modern web technologies. 
 
 ## Tech stack
 
