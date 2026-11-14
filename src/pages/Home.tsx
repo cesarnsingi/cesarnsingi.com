@@ -153,7 +153,7 @@ export default function Home() {
             </Link>
 
             <a
-              href="https://github.com/crnsingi"
+              href="https://github.com/cesarnsingi"
               target="_blank"
               rel="noopener noreferrer"
               className="px-4 py-2 bg-neutral-900 text-white text-sm rounded-md hover:bg-neutral-800 transition-colors flex items-center gap-2"
@@ -163,7 +163,7 @@ export default function Home() {
             </a>
 
             <a
-              href="https://www.linkedin.com/in/cesar-nsingi/"
+              href="https://www.linkedin.com/in/cesarnsingi/"
               target="_blank"
               rel="noopener noreferrer"
               className="px-4 py-2 bg-neutral-100 dark:bg-neutral-800 text-sm rounded-md hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors flex items-center gap-2"
