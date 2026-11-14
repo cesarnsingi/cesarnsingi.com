@@ -17,12 +17,12 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://cesarnsingi.com'),
 
   title: {
-    default: 'César Nsingi - Software Engineer',
+    default: 'César Nsingi ',
     template: '%s | César Nsingi',
   },
 
   description:
-    'Cesar Nsingi - Full Stack Developer specializing in MERN stack, React.js, Node.js, and modern web technologies.',
+    'Cesar Nsingi',
 
   keywords: [
     'Cesar Nsingi',
@@ -50,8 +50,8 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: '/',
-    siteName: 'Cesar Nsingi Portfolio',
-    title: 'Cesar Nsingi - Full Stack Developer',
+    siteName: 'Cesar Nsingi ',
+    title: 'Cesar Nsingi ',
     description:
       'Full-stack developer specializing in MERN stack, React.js, Node.js, and modern web technologies.',
   },

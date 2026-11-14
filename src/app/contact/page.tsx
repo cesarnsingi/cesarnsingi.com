@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
 	title: 'Contact - Cesar Nsingi',
-	description: 'Cesar Nsingi, a Software Engineer.',
+	description: 'Cesar Nsingi',
 };
 
 export default function ContactPage() {
