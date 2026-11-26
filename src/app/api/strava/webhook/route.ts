@@ -1,7 +1,8 @@
-import { after, NextRequest, NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { handleEvent, type WebhookEvent } from '@/lib/strava';
 
 export const dynamic = 'force-dynamic';
+export const maxDuration = 10;
 
 // Strava calls this once, when you create the subscription.
 export async function GET(req: NextRequest) {
@@ -19,7 +20,14 @@ export async function POST(req: NextRequest) {
   // Webhooks are unsigned: only accept events for your subscription and your athlete.
   const okSub = !process.env.STRAVA_SUBSCRIPTION_ID || String(e.subscription_id) === process.env.STRAVA_SUBSCRIPTION_ID;
   const okOwner = !process.env.STRAVA_ATHLETE_ID || String(e.owner_id) === process.env.STRAVA_ATHLETE_ID;
-  if (okSub && okOwner) after(() => handleEvent(e).catch(err => console.error('strava event failed', err)));
+
+  if (okSub && okOwner) {
+    // Do the work before replying, but never wait past 1.5s so Strava always gets its 200 in time.
+    // handleEvent is safe to repeat, so if Strava retries after a slow run nothing is duplicated.
+    const work = handleEvent(e).catch(err => console.error('strava event failed', err));
+    const limit = new Promise<void>(resolve => setTimeout(resolve, 1500));
+    await Promise.race([work, limit]);
+  }
 
   return new NextResponse(null, { status: 200 });
 }
