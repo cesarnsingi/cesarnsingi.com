@@ -1,4 +1,3 @@
-
 import type { Metadata, Viewport } from 'next';
 import Link from 'next/link';
 import { Inter } from 'next/font/google';
@@ -84,7 +83,7 @@ const columns: { title: string; items: Item[] }[] = [
   {
     title: 'Everyday',
     items: [
-      { name: 'Everyday run', href: '/' },
+      { name: 'Everyday run', href: '/run' }, // changed from '/'
       { name: 'Monthly books', href: '/contact' },
     ],
   },
@@ -136,10 +135,12 @@ export default function RootLayout({
           {/* Header */}
           <header className="relative z-20 flex items-start justify-between gap-4 px-6 pt-8 md:px-[5.8vw] md:pt-[5.4vh]">
 
-            {/* Name and profession */}
+            {/* Name and profession (name links home) */}
             <div className="mt-4 translate-x-2 text-[17px] leading-7 md:mt-6 md:translate-x-4">
               <h1 className="font-normal text-white">
-                César Nsingi
+                <Link href="/" className="transition-colors hover:text-neutral-300">
+                  César Nsingi
+                </Link>
               </h1>
               <p className="font-normal text-neutral-400">
                 Software Engineer

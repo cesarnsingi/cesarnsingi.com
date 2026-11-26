@@ -675,6 +675,9 @@ video {
 .mt-4 {
   margin-top: 1rem;
 }
+.mt-6 {
+  margin-top: 1.5rem;
+}
 .block {
   display: block;
 }
@@ -735,6 +738,9 @@ video {
 .max-h-\[60vh\] {
   max-height: 60vh;
 }
+.min-h-\[60vh\] {
+  min-height: 60vh;
+}
 .min-h-\[80vh\] {
   min-height: 80vh;
 }
@@ -786,6 +792,9 @@ video {
 .max-w-3xl {
   max-width: 48rem;
 }
+.max-w-5xl {
+  max-width: 64rem;
+}
 .max-w-7xl {
   max-width: 80rem;
 }
@@ -822,6 +831,10 @@ video {
 }
 .animate-pulse {
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+.touch-pan-y {
+  --tw-pan-y: pan-y;
+  touch-action: var(--tw-pan-x) var(--tw-pan-y) var(--tw-pinch-zoom);
 }
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1008,6 +1021,12 @@ video {
 .to-transparent {
   --tw-gradient-to: transparent var(--tw-gradient-to-position);
 }
+.fill-neutral-700 {
+  fill: #404040;
+}
+.fill-white {
+  fill: #fff;
+}
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -1048,6 +1067,10 @@ video {
 .py-1\.5 {
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
+}
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 .py-2 {
   padding-top: 0.5rem;
@@ -1387,6 +1410,11 @@ body {
     background-color: rgb(255 255 255 / 0.05);
   }
 
+  .hover\:text-neutral-300:hover {
+    --tw-text-opacity: 1;
+    color: rgb(212 212 212 / var(--tw-text-opacity));
+  }
+
   .hover\:text-neutral-900:hover {
     --tw-text-opacity: 1;
     color: rgb(23 23 23 / var(--tw-text-opacity));
@@ -1468,10 +1496,6 @@ body {
 
   .md\:grid-cols-6 {
     grid-template-columns: repeat(6, minmax(0, 1fr));
-  }
-
-  .md\:grid-cols-\[1fr_1fr_auto\] {
-    grid-template-columns: 1fr 1fr auto;
   }
 
   .md\:grid-cols-\[1fr_auto\] {
